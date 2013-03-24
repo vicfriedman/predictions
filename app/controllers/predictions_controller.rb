@@ -44,6 +44,7 @@ class PredictionsController < ApplicationController
 
     respond_to do |format|
       if @prediction.save
+        PredictionMailer.welcome_email(@prediction).deliver
         format.html { redirect_to @prediction, notice: 'Prediction was successfully created.' }
         format.json { render json: @prediction, status: :created, location: @prediction }
       else
