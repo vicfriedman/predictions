@@ -932,3 +932,50 @@ Errno::ECONNREFUSED (Connection refused - connect(2)):
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-23 22:13:08 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ck+0AeCkCSAzpsUwRTMgr08qKnE/jW79/sLF9wzhL2I=", "prediction"=>{"email"=>"laurabrown1113@gmail.com", "prediction"=>"prediction", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"02", "deadline(5i)"=>"01"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 02:13:08 UTC +00:00], ["deadline", Sun, 24 Mar 2013 02:01:00 UTC +00:00], ["email", "laurabrown1113@gmail.com"], ["prediction", "prediction"], ["updated_at", Sun, 24 Mar 2013 02:13:08 UTC +00:00]]
+  [1m[36m (52.7ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to laurabrown1113@gmail.com (7ms)
+Date: Sat, 23 Mar 2013 22:13:08 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <514e6134a8fac_ca0a3fd9e12ce78c9377@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      prediction
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 82ms
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+  app/controllers/predictions_controller.rb:47:in `block in create'
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
