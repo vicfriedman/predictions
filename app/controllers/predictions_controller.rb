@@ -1,3 +1,4 @@
+
 class PredictionsController < ApplicationController
   # GET /predictions
   # GET /predictions.json
@@ -41,7 +42,6 @@ class PredictionsController < ApplicationController
   # POST /predictions.json
   def create
     @prediction = Prediction.new(params[:prediction])
-
     respond_to do |format|
       if @prediction.save
         PredictionMailer.welcome_email(@prediction).deliver

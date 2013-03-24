@@ -3,7 +3,7 @@ class PredictionMailer < ActionMailer::Base
 
   def welcome_email(prediction)
     @prediction = prediction
-    mail(:to => @prediction.email, :subject => "Welcome to My Awesome Site")
+    mail(:to => prediction.email, :subject => "Welcome to My Awesome Site")
   end
 
 

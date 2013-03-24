@@ -1,18 +1,5 @@
 Predictions::Application.configure do
 
-  ActionMailer::Base.delivery_method = :smtp
-
-  ActionMailer::Base.smtp_settings = {
-    :address => 'smtp.gmail.com',
-    :port => 587,
-    # :domain => 'mydomain.com',
-    :authentication => :plain,
-    :user_name => 'predictions.r.us@gmail.com',
-    :password => 'flatiron'
-    }
-
-  ActionMailer::Base.default_url_options[:host] = "localhost:3000"
-
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests

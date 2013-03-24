@@ -984,3 +984,1448 @@ Connecting to database specified by database.yml
 Migrating to CreatePredictions (20130324010808)
   [1m[35m (0.4ms)[0m  select sqlite_version(*)
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (4.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePredictions (20130324010808)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/predictions" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Connecting to database specified by database.yml
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" [0m
+  Rendered predictions/index.html.erb within layouts/application (11.5ms)
+Compiled jquery.js  (2ms)  (pid 62848)
+Compiled jquery_ujs.js  (0ms)  (pid 62848)
+Compiled application.js  (44ms)  (pid 62848)
+Completed 200 OK in 138ms (Views: 90.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /predictions.css - 200 OK (3ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /predictions.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:44:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:44:46 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (18.9ms)
+  Rendered predictions/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:44:46 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:44:46 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:44:46 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:44:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:44:57 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"prediction", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"44"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 18:44:57 UTC +00:00], ["deadline", Sun, 24 Mar 2013 18:44:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "prediction"], ["updated_at", Sun, 24 Mar 2013 18:44:57 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.4ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1816ms)
+Date: Sun, 24 Mar 2013 14:44:58 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f49aa5ebeb_f5803fc9f326da84795df@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      prediction
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 2246ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:48:in `block in create'
+  app/controllers/predictions_controller.rb:46:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:47:48 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (7.6ms)
+  Rendered predictions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:47:49 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:47:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:47:49 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:47:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:47:58 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"ill win a million dollars", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"47"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1455ms)
+Date: Sun, 24 Mar 2013 14:47:58 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4a5ebaca7_f5803fc9f239b26879628@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      ill win a million dollars
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1477ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:50:11 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (32.0ms)
+  Rendered predictions/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:50:11 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:50:11 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:50:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:50:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:50:18 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"ill win a LOT of money", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"50"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (2031ms)
+Date: Sun, 24 Mar 2013 14:50:18 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4aea434d6_f5803fc9f40b766c79769@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      ill win a LOT of money
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 2043ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:50:42 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"ill win a LOT of money", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"50"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1180ms)
+Date: Sun, 24 Mar 2013 14:50:42 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4b0228f46_f5803fc9f40b766c798b2@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      ill win a LOT of money
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1194ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:51:31 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (8.9ms)
+  Rendered predictions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:51:31 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:51:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:51:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:51:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:51:39 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"money $$$$$", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"51"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1236ms)
+Date: Sun, 24 Mar 2013 14:51:39 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4b3b3d84e_f5803fc9f3105b107994c@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      money $$$$$
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1251ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.3ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:52:59 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"money $$$$$", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"51"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1510ms)
+Date: Sun, 24 Mar 2013 14:52:59 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4b8b2729e_f5803fc9f2c6c20c80030@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      money $$$$$
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1528ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:53:03 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (7.9ms)
+  Rendered predictions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:53:03 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:53:03 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:53:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:53:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:53:10 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"ewiohdsnfaewihorg", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"53"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1239ms)
+Date: Sun, 24 Mar 2013 14:53:10 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4b9677e83_f5803fc9f239313080150@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      ewiohdsnfaewihorg
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1250ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.8ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.9ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:54:25 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (8.0ms)
+  Rendered predictions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:54:26 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:54:26 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:54:26 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:54:26 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:54:31 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"w[eiahfds", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"54"}, "commit"=>"Create Prediction"}
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1593ms)
+Date: Sun, 24 Mar 2013 14:54:31 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4be735baa_f5803fc9f388dff4802aa@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      w[eiahfds
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1609ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:55:58 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (6.2ms)
+  Rendered predictions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 46ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:55:58 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:55:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:55:58 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:55:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:56:02 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"pwoejds", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"55"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 18:56:02 UTC +00:00], ["deadline", Sun, 24 Mar 2013 18:55:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "pwoejds"], ["updated_at", Sun, 24 Mar 2013 18:56:02 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1732ms)
+Date: Sun, 24 Mar 2013 14:56:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4c4287b7_f5803fc9f231d5ac80386@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      pwoejds
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1751ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:47:in `block in create'
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 14:57:25 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (8.2ms)
+  Rendered predictions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 14:57:25 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 14:57:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 14:57:25 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 14:57:25 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 14:57:29 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"qwEF", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"18", "deadline(5i)"=>"57"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 18:57:29 UTC +00:00], ["deadline", Sun, 24 Mar 2013 18:57:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "qwEF"], ["updated_at", Sun, 24 Mar 2013 18:57:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1215ms)
+Date: Sun, 24 Mar 2013 14:57:29 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4c99a5e89_f5803fc9f2752eec804f9@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      qwEF
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1228ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:47:in `block in create'
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.1ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 15:04:42 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (9.8ms)
+  Rendered predictions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:04:42 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:04:42 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:04:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:04:42 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:04:46 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"qaewreg", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"04"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:04:46 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:04:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "qaewreg"], ["updated_at", Sun, 24 Mar 2013 19:04:46 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1731ms)
+Date: Sun, 24 Mar 2013 15:04:46 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4e4e211ff_f5803fc9f27e7ce080590@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      qaewreg
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1747ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:47:in `block in create'
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 15:08:51 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (5.9ms)
+  Rendered predictions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:08:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:08:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:08:51 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:08:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:08:55 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"opewj", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"08"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 19:08:55 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:08:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "opewj"], ["updated_at", Sun, 24 Mar 2013 19:08:55 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1738ms)
+Date: Sun, 24 Mar 2013 15:08:55 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4f47ace2e_f5803fc9f41c21ec80672@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      opewj
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1754ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:47:in `block in create'
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 15:10:32 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (38.1ms)
+  Rendered predictions/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:10:32 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:10:32 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:10:32 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:10:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:10:36 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wqetre", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"10"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:10:36 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:10:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wqetre"], ["updated_at", Sun, 24 Mar 2013 19:10:36 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (1845ms)
+Date: Sun, 24 Mar 2013 15:10:36 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4fac85a1c_f5803fc9f2e37e888073@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wqetre
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Completed 500 Internal Server Error in 1860ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at
+):
+  app/controllers/predictions_controller.rb:47:in `block in create'
+  app/controllers/predictions_controller.rb:45:in `create'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-03-24 15:11:37 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (10.9ms)
+  Rendered predictions/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 91ms (Views: 64.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /predictions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /predictions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-24 15:11:43 -0400
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:11:49 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.7ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:11:49 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:11:49 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.4ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3749ms)
+Date: Sun, 24 Mar 2013 15:11:49 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4ff5a144c_f5e33ff405a38f9879322@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/16
+Completed 302 Found in 4101ms (ActiveRecord: 8.4ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:11:53 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 19:11:53 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:11:53 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (2997ms)
+Date: Sun, 24 Mar 2013 15:11:53 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4ff96660a_f5e33ff405bf49cc79412@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/17
+Completed 302 Found in 3010ms (ActiveRecord: 3.1ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:11:56 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:11:56 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:11:56 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (2893ms)
+Date: Sun, 24 Mar 2013 15:11:56 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4ffc695b5_f5e33ff40708e608795e2@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/18
+Completed 302 Found in 2905ms (ActiveRecord: 1.6ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:11:59 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 19:11:59 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:11:59 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3281ms)
+Date: Sun, 24 Mar 2013 15:11:59 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f4fff53f8e_f5e33ff40709b4e879654@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/19
+Completed 302 Found in 3296ms (ActiveRecord: 3.0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:12:02 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:12:02 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:12:02 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3349ms)
+Date: Sun, 24 Mar 2013 15:12:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f50029da65_f5e33ff406012b6c79766@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/20
+Completed 302 Found in 3363ms (ActiveRecord: 2.6ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:12:05 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 19:12:05 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:12:05 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3111ms)
+Date: Sun, 24 Mar 2013 15:12:06 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f5006301d_f5e33ff406a7841c798eb@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/21
+Completed 302 Found in 3125ms (ActiveRecord: 2.7ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:12:09 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:12:09 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:12:09 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3620ms)
+Date: Sun, 24 Mar 2013 15:12:09 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f50092227b_f5e33ff40738828c79960@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/22
+Completed 302 Found in 3633ms (ActiveRecord: 2.8ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:12:12 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 19:12:12 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:12:12 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3364ms)
+Date: Sun, 24 Mar 2013 15:12:12 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f500cbe03d_f5e33ff40604e7d480032@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/23
+Completed 302 Found in 3385ms (ActiveRecord: 2.4ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:12:16 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"wfhn", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"11"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 24 Mar 2013 19:12:16 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:11:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "wfhn"], ["updated_at", Sun, 24 Mar 2013 19:12:16 UTC +00:00]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3058ms)
+Date: Sun, 24 Mar 2013 15:12:16 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f50102dc1c_f5e33ff40605585480197@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      wfhn
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/24
+Completed 302 Found in 3089ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/predictions/24" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mPrediction Load (0.3ms)[0m  SELECT "predictions".* FROM "predictions" WHERE "predictions"."id" = ? LIMIT 1  [["id", "24"]]
+  Rendered predictions/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /predictions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-24 15:12:19 -0400
+Served asset /predictions.js - 304 Not Modified (0ms)
+
+
+Started GET "/predictions/NEW" for 127.0.0.1 at 2013-03-24 15:13:57 -0400
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"NEW"}
+  [1m[36mPrediction Load (0.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE "predictions"."id" = ? LIMIT 1[0m  [["id", "NEW"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Prediction with id=NEW):
+  app/controllers/predictions_controller.rb:17:in `show'
+
+
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/Victoria/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (8.3ms)
+  Rendered predictions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /predictions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /predictions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:06 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-24 15:14:11 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"money!!!! ", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"24", "deadline(4i)"=>"19", "deadline(5i)"=>"14"}, "commit"=>"Create Prediction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 24 Mar 2013 19:14:11 UTC +00:00], ["deadline", Sun, 24 Mar 2013 19:14:00 UTC +00:00], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "money!!!! "], ["updated_at", Sun, 24 Mar 2013 19:14:11 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  Rendered prediction_mailer/welcome_email.html.erb (0.1ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3485ms)
+Date: Sun, 24 Mar 2013 15:14:11 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <514f508385334_f5e33ff406068008802ed@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      money!!!! 
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/25
+Completed 302 Found in 3502ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/predictions/25" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPrediction Load (0.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE "predictions"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  Rendered predictions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /predictions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /predictions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-24 15:14:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
