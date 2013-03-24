@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  prediction: MyString
+  deadline: 2013-03-23 21:08:08
+
+two:
+  email: MyString
+  prediction: MyString
+  deadline: 2013-03-23 21:08:08

@@ -1,0 +1,86 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePredictions (20130324010808)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "predictions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "prediction" varchar(255), "deadline" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130324010808')[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-03-23 21:10:49 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (43ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2013-03-23 21:10:54 -0400
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" [0m
+  Rendered predictions/index.html.erb within layouts/application (4.6ms)
+Compiled predictions.css  (27ms)  (pid 8634)
+Compiled scaffolds.css  (19ms)  (pid 8634)
+Compiled application.css  (67ms)  (pid 8634)
+Compiled jquery.js  (3ms)  (pid 8634)
+Compiled jquery_ujs.js  (0ms)  (pid 8634)
+Compiled predictions.js  (626ms)  (pid 8634)
+Compiled application.js  (668ms)  (pid 8634)
+Completed 200 OK in 965ms (Views: 924.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /predictions.css - 200 OK (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /application.js - 200 OK (75ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /predictions.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /scaffolds.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:55 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-23 21:10:59 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (52.0ms)
+  Rendered predictions/new.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 97ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-23 21:10:59 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:59 -0400
+Served asset /predictions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-23 21:10:59 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
