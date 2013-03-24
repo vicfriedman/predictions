@@ -24,8 +24,8 @@ Predictions::Application.configure do
     :port => 587,
     :domain => 'localhost:3000',
     :authentication => :plain,
-    :user_name => ENV['EMAIL_USERNAME'],
-    :password => ENV['EMAIL_PASSWORD'],
+    :user_name => 'predictions.r.us@gmail.com',
+    :password => 'flatiron2013',
     :authentication => 'plain',
     :enable_starttls_auto => true
     }
