@@ -3287,3 +3287,114 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-24 17:28:05 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Connecting to database specified by database.yml
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (16.2ms)
+  Rendered predictions/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 126ms (Views: 94.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /predictions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /predictions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:11 -0400
+Served asset /application.js - 304 Not Modified (36ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-25 09:06:49 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"hello@johnkellyferguson.com", "prediction"=>"You will smile when you read this", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"25", "deadline(4i)"=>"13", "deadline(5i)"=>"06"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Mon, 25 Mar 2013 13:06:49 UTC +00:00], ["deadline", Mon, 25 Mar 2013 13:06:00 UTC +00:00], ["email", "hello@johnkellyferguson.com"], ["prediction", "You will smile when you read this"], ["updated_at", Mon, 25 Mar 2013 13:06:49 UTC +00:00]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  Rendered prediction_mailer/welcome_email.html.erb (0.4ms)
+
+Sent mail to hello@johnkellyferguson.com (5949ms)
+Date: Mon, 25 Mar 2013 09:06:50 -0400
+From: predictions.r.us@gmail.com
+To: hello@johnkellyferguson.com
+Message-ID: <51504bea310ca_fb3e3ff4ba3b1f5c68270@victoria-miranda-friedmans-macbook.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      You have successfully submitted your prediction.<br/>
+      You will smile when you read this
+    </p>
+    <p>
+      To login to the site, just follow this link.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+Redirected to http://localhost:3000/predictions/34
+Completed 302 Found in 6412ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/predictions/34" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mPrediction Load (0.3ms)[0m  SELECT "predictions".* FROM "predictions" WHERE "predictions"."id" = ? LIMIT 1  [["id", "34"]]
+  Rendered predictions/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /predictions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /predictions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-25 09:06:56 -0400
+Served asset /application.js - 304 Not Modified (0ms)
