@@ -18,3 +18,15 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+set :cron_log, "/log/cron_log.log"
+set :whenever_command, "bundle exec whenever"
+set :environment, "development"
+set :output, { :standard => "/var/log/predictions.log"}
+
+
+
+every 1.day, :at => '7:52 pm' do
+  runner "PredictionMailer.send_todays_emails"
+  run "whenever --update-crontab #{predictions}"
+end
