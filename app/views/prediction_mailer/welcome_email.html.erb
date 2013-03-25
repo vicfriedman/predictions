@@ -5,12 +5,13 @@
   </head>
   <body>
     <p>
-      You have successfully submitted your prediction.<br/>
-      <%= @prediction.prediction %>
+      On <%= @prediction.created_at.strftime('%B %e, %Y') %> you predicted:
     </p>
     <p>
-      To login to the site, just follow this link.
+        <%= @prediction.prediction %>
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>
+        Did your prediction come true?
+    </p>
   </body>
 </html>
