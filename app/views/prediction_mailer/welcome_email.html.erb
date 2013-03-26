@@ -5,7 +5,7 @@
   </head>
   <body>
     <p>
-      On you predicted:
+      On <%= @prediction.created_at.to_date %> you predicted:
     </p>
     <p>
         <%= @prediction.prediction %>

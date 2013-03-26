@@ -3070,3 +3070,1480 @@ Served asset /application.css - 304 Not Modified (2ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 13:35:52 -0400
 Served asset /application.js - 304 Not Modified (7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePredictions (20130324010808)
+Migrating to ChangePredictionsDeadlineToDate (20130325221055)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:48:17.656282'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (69.6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:49:02.410117'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (4.4ms)
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:50:00.764810'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.9ms)
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:50:02.915426'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4969ms)
+Date: Tue, 26 Mar 2013 13:50:00 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151dfc8ec0e9_14fcb3fcdb9833bd4187c9@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4811ms)
+Date: Tue, 26 Mar 2013 13:50:03 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151dfcb13e5f_150633fcf1dc27be0429dc@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4853ms)
+Date: Tue, 26 Mar 2013 13:50:05 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151dfcde5ee9_14fcb3fcdb9833bd418877@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4321ms)
+Date: Tue, 26 Mar 2013 13:50:07 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151dfcfdb95e_150633fcf1dc27be04308a@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (5097ms)
+Date: Tue, 26 Mar 2013 13:50:10 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151dfd2c4fec_14fcb3fcdb9833bd418933@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+
+Sent mail to laurabrown1113@gmail.com (4970ms)
+Date: Tue, 26 Mar 2013 13:50:12 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151dfd43896c_150633fcf1dc27be0431f@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Connecting to database specified by database.yml
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (10.7ms)
+  Rendered predictions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 90ms (Views: 53.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /predictions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /predictions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 13:50:51 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:51:02.625646'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (5434ms)
+Date: Tue, 26 Mar 2013 13:51:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e006c2585_151173ff139c27bd489454@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ck+0AeCkCSAzpsUwRTMgr08qKnE/jW79/sLF9wzhL2I=", "prediction"=>{"email"=>"bob@flatironschool.com", "prediction"=>"I will hang out with students more.", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"26"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 26 Mar 2013 17:51:08 UTC +00:00], ["deadline", Tue, 26 Mar 2013], ["email", "bob@flatironschool.com"], ["prediction", "I will hang out with students more."], ["updated_at", Tue, 26 Mar 2013 17:51:08 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/predictions/13
+Completed 302 Found in 11ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/predictions/13" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPrediction Load (0.2ms)[0m  SELECT "predictions".* FROM "predictions" WHERE "predictions"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered predictions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /predictions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /predictions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 13:51:08 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4613ms)
+Date: Tue, 26 Mar 2013 13:51:08 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e00c39a69_151173ff139c27bd48952d@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2013-03-26 13:51:14 -0400
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.2ms)[0m  [1mSELECT "predictions".* FROM "predictions" [0m
+  Rendered predictions/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+Sent mail to laurabrown1113@gmail.com (5390ms)
+Date: Tue, 26 Mar 2013 13:51:12 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e010d1a04_151173ff139c27bd489692@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:52:02.534465'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.7ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4692ms)
+Date: Tue, 26 Mar 2013 13:52:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e042aca15_151b73febad427bdc9446e@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4985ms)
+Date: Tue, 26 Mar 2013 13:52:07 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e0476332c_151b73febad427bdc9459d@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (4576ms)
+Date: Tue, 26 Mar 2013 13:52:12 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e04c62183_151b73febad427bdc946fe@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (4843ms)
+Date: Tue, 26 Mar 2013 13:52:16 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e050f176a_151b73febad427bdc947fc@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:53:03.129004'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4636ms)
+Date: Tue, 26 Mar 2013 13:53:03 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e07f491c8_152563ff50d027be0976b3@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3975ms)
+Date: Tue, 26 Mar 2013 13:53:07 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e083e5cee_152563ff50d027be09776f@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (3664ms)
+Date: Tue, 26 Mar 2013 13:53:11 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e087e2744_152563ff50d027be09789@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (3671ms)
+Date: Tue, 26 Mar 2013 13:53:15 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e08b933d3_152563ff50d027be097966@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:54:03.743719'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.4ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4452ms)
+Date: Tue, 26 Mar 2013 13:54:03 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e0bbde0c3_152f53fd63e027bd833757@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3680ms)
+Date: Tue, 26 Mar 2013 13:54:08 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e0c05995d_152f53fd63e027bd833890@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (3681ms)
+Date: Tue, 26 Mar 2013 13:54:12 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e0c4e5fc_152f53fd63e027bd8339cd@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (3653ms)
+Date: Tue, 26 Mar 2013 13:54:15 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e0c7b767b_152f53fd63e027bd834094@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:55:02.695263'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.6ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4460ms)
+Date: Tue, 26 Mar 2013 13:55:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e0f6d6dc0_153943ff9a1027bd41798@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3676ms)
+Date: Tue, 26 Mar 2013 13:55:07 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e0fb54a24_153943ff9a1027bd41807c@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to laurabrown1113@gmail.com (3688ms)
+Date: Tue, 26 Mar 2013 13:55:11 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e0ff84d2_153943ff9a1027bd4181f0@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (4272ms)
+Date: Tue, 26 Mar 2013 13:55:14 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e102b32fc_153943ff9a1027bd4182ab@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:56:02.300283'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (3.5ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4770ms)
+Date: Tue, 26 Mar 2013 13:56:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e132734ff_154333ff7a8c27bdc372d4@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4337ms)
+Date: Tue, 26 Mar 2013 13:56:07 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e1373cb09_154333ff7a8c27bdc373fe@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (4591ms)
+Date: Tue, 26 Mar 2013 13:56:11 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e13b91a1c_154333ff7a8c27bdc374ec@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (3976ms)
+Date: Tue, 26 Mar 2013 13:56:16 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e14030948_154333ff7a8c27bdc37578@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:57:02.514889'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.9ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4163ms)
+Date: Tue, 26 Mar 2013 13:57:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e16eaafb6_154d33fd5b2027bd8276a@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3354ms)
+Date: Tue, 26 Mar 2013 13:57:06 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e172d4947_154d33fd5b2027bd8277ed@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (3227ms)
+Date: Tue, 26 Mar 2013 13:57:10 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e17639a8d_154d33fd5b2027bd82785b@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (3800ms)
+Date: Tue, 26 Mar 2013 13:57:13 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e17973ea7_154d33fd5b2027bd827978@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:58:02.567024'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4040ms)
+Date: Tue, 26 Mar 2013 13:58:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e1aab3b84_155723fdbf2027bd827660@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3653ms)
+Date: Tue, 26 Mar 2013 13:58:06 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e1aebf43a_155723fdbf2027bd8277ea@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to laurabrown1113@gmail.com (3997ms)
+Date: Tue, 26 Mar 2013 13:58:10 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e1b26cfee_155723fdbf2027bd827864@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (3670ms)
+Date: Tue, 26 Mar 2013 13:58:14 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e1b66f111_155723fdbf2027bd82795f@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 17:59:02.449106'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.4ms)
+
+Sent mail to victoria.m.friedman@gmail.com (4028ms)
+Date: Tue, 26 Mar 2013 13:59:02 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e1e6969c2_156113fecf1827bd433534@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3367ms)
+Date: Tue, 26 Mar 2013 13:59:06 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e1ea9f213_156113fecf1827bd4336d1@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to laurabrown1113@gmail.com (3364ms)
+Date: Tue, 26 Mar 2013 13:59:10 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e1ee6de8_156113fecf1827bd433779@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to bob@flatironschool.com (3216ms)
+Date: Tue, 26 Mar 2013 13:59:13 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e1f162943_156113fecf1827bd4338b1@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.0ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 18:00:02.914354'))[0m
+  Rendered prediction_mailer/welcome_email.html.erb (2.5ms)
+
+Sent mail to victoria.m.friedman@gmail.com (5006ms)
+Date: Tue, 26 Mar 2013 14:00:03 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e22314631_156b03fedc2027bd8364ea@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        hellloooo
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to victoria.m.friedman@gmail.com (3711ms)
+Date: Tue, 26 Mar 2013 14:00:08 -0400
+From: predictions.r.us@gmail.com
+To: victoria.m.friedman@gmail.com
+Message-ID: <5151e22816eb6_156b03fedc2027bd83658d@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        is it working today?
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.3ms)
+
+Sent mail to laurabrown1113@gmail.com (4064ms)
+Date: Tue, 26 Mar 2013 14:00:11 -0400
+From: predictions.r.us@gmail.com
+To: laurabrown1113@gmail.com
+Message-ID: <5151e22bc73bb_156b03fedc2027bd8366a@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        help me
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
+  Rendered prediction_mailer/welcome_email.html.erb (0.2ms)
+
+Sent mail to bob@flatironschool.com (4482ms)
+Date: Tue, 26 Mar 2013 14:00:15 -0400
+From: predictions.r.us@gmail.com
+To: bob@flatironschool.com
+Message-ID: <5151e22fd9075_156b03fedc2027bd836720@Lauras-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On 2013-03-26 you predicted:
+    </p>
+    <p>
+        I will hang out with students more.
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
