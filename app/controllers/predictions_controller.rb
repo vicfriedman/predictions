@@ -41,10 +41,10 @@ class PredictionsController < ApplicationController
   # POST /predictions
   # POST /predictions.json
   def create
-    @email = Email.first_or_create(params[:email])
-    @prediction = Prediction.new(params[:prediction])
+    @email = Email.first_or_create(email: params[:email])
+    @prediction = @email.predictions.build(params[:prediction])
     respond_to do |format|
-      if @prediction.save
+      if @email.save
         format.html { redirect_to @prediction, notice: 'Prediction was successfully created.' }
         format.json { render json: @prediction, status: :created, location: @prediction }
       else
