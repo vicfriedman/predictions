@@ -4658,3 +4658,39 @@ Migrating to AddEmailIdinPrediction (20130326184332)
   [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130326184332')[0m
   [1m[35m (1.2ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-26 14:48:19 -0400
+Connecting to database specified by database.yml
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (109.7ms)
+  Rendered predictions/new.html.erb within layouts/application (120.7ms)
+Completed 200 OK in 319ms (Views: 201.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /predictions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /jquery.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /predictions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 14:48:20 -0400
+Served asset /application.js - 304 Not Modified (10ms)
