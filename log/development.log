@@ -764,3 +764,10 @@ Connecting to database specified by database.yml
 
 Sent mail to  (1ms)
 
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (2.7ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 20:24:03.890626'))[0m
+  [1m[35mEmail Load (0.1ms)[0m  SELECT "emails".* FROM "emails" WHERE "emails"."id" = 1 LIMIT 1
+  Rendered prediction_mailer/welcome_email.html.erb (4.3ms)
+
+Sent mail to  (0ms)
+
