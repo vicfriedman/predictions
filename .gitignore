@@ -1,6 +1,0 @@
-config/user_pass.yml
-db/*.sqlite3
-log/
-tmp/
-
-log/development.log
