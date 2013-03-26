@@ -1082,3 +1082,82 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-26 12:18:37 -0400
+Connecting to database specified by database.yml
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (13.3ms)
+  Rendered predictions/new.html.erb within layouts/application (36.4ms)
+Compiled predictions.css  (10ms)  (pid 67923)
+Compiled scaffolds.css  (11ms)  (pid 67923)
+Compiled application.css  (49ms)  (pid 67923)
+Compiled jquery.js  (2ms)  (pid 67923)
+Compiled jquery_ujs.js  (0ms)  (pid 67923)
+Compiled predictions.js  (302ms)  (pid 67923)
+Compiled application.js  (406ms)  (pid 67923)
+Completed 200 OK in 604ms (Views: 573.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /predictions.css - 200 OK (9ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /predictions.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 12:18:38 -0400
+Served asset /application.js - 200 OK (8ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2013-03-26 12:18:45 -0400
+Processing by PredictionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKOf5cCKN/+P8+Bscna4PfOkac9Q0jbnY1UT6kqohDQ=", "prediction"=>{"email"=>"victoria.m.friedman@gmail.com", "prediction"=>"hellloooo", "deadline(1i)"=>"2013", "deadline(2i)"=>"3", "deadline(3i)"=>"26"}, "commit"=>"Create Prediction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "predictions" ("created_at", "deadline", "email", "prediction", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 26 Mar 2013 16:18:45 UTC +00:00], ["deadline", Tue, 26 Mar 2013], ["email", "victoria.m.friedman@gmail.com"], ["prediction", "hellloooo"], ["updated_at", Tue, 26 Mar 2013 16:18:45 UTC +00:00]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/predictions/10
+Completed 302 Found in 20ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/predictions/10" for 127.0.0.1 at 2013-03-26 12:18:45 -0400
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPrediction Load (0.4ms)[0m  SELECT "predictions".* FROM "predictions" WHERE "predictions"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered predictions/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2013-03-26 12:18:47 -0400
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.2ms)[0m  [1mSELECT "predictions".* FROM "predictions" [0m
+  Rendered predictions/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-26 12:32:10 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (8.3ms)
+  Rendered predictions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-26 12:32:10 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)

@@ -58,9 +58,9 @@ module Predictions
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
-    config.time_zone = 'Eastern Time (US & Canada)'
-    config.active_record.default_timezone = :local
+    # config.assets.version = '1.0'
+    # config.time_zone = 'Eastern Time (US & Canada)'
+    # config.active_record.default_timezone = :local
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'user_pass.yml')

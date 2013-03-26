@@ -26,7 +26,9 @@ set :output, { :standard => "/var/log/predictions.log"}
 
 
 
-every 1.day, :at => '7:52 pm' do
+every 1.day, :at => '12:45 pm' do
   runner "PredictionMailer.send_todays_emails"
-  run "whenever --update-crontab #{predictions}"
 end
+
+
+
