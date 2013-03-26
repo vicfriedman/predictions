@@ -41,7 +41,7 @@ class PredictionsController < ApplicationController
   # POST /predictions
   # POST /predictions.json
   def create
-    @email = Email.first_or_create(email: params[:email])
+    @email = Email.find_or_create_by_email(params[:email].downcase)
     @prediction = @email.predictions.build(params[:prediction])
     respond_to do |format|
       if @email.save
