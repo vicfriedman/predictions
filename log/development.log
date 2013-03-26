@@ -4547,3 +4547,53 @@ Content-Transfer-Encoding: 7bit
     </p>
   </body>
 </html>
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-03-26 14:33:03 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (3ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2013-03-26 14:33:09 -0400
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.2ms)[0m  [1mSELECT "predictions".* FROM "predictions" [0m
+  Rendered predictions/index.html.erb within layouts/application (14.6ms)
+Compiled jquery.js  (3ms)  (pid 4343)
+Compiled jquery_ujs.js  (0ms)  (pid 4343)
+Compiled application.js  (245ms)  (pid 4343)
+Completed 200 OK in 614ms (Views: 449.2ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /predictions.css - 200 OK (3ms)
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /predictions.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-26 14:33:10 -0400
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2013-03-26 14:33:13 -0400
+Processing by PredictionsController#new as HTML
+  Rendered predictions/_form.html.erb (103.1ms)
+  Rendered predictions/new.html.erb within layouts/application (131.4ms)
+Completed 200 OK in 145ms (Views: 144.1ms | ActiveRecord: 0.0ms)
