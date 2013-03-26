@@ -729,3 +729,38 @@ Served asset /predictions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 15:09:50 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.6ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 20:19:03.265947'))[0m
+  [1m[35mEmail Load (0.2ms)[0m  SELECT "emails".* FROM "emails" WHERE "emails"."id" = 1 LIMIT 1
+  Rendered prediction_mailer/welcome_email.html.erb (2.9ms)
+
+Sent mail to  (1ms)
+
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.2ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 20:20:03.341836'))[0m
+  [1m[35mEmail Load (0.2ms)[0m  SELECT "emails".* FROM "emails" WHERE "emails"."id" = 1 LIMIT 1
+  Rendered prediction_mailer/welcome_email.html.erb (2.8ms)
+
+Sent mail to  (0ms)
+
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (4.9ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 20:21:03.204254'))[0m
+  [1m[35mEmail Load (0.1ms)[0m  SELECT "emails".* FROM "emails" WHERE "emails"."id" = 1 LIMIT 1
+  Rendered prediction_mailer/welcome_email.html.erb (2.6ms)
+
+Sent mail to  (0ms)
+
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (1.1ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 20:22:03.571805'))[0m
+  [1m[35mEmail Load (0.1ms)[0m  SELECT "emails".* FROM "emails" WHERE "emails"."id" = 1 LIMIT 1
+  Rendered prediction_mailer/welcome_email.html.erb (2.6ms)
+
+Sent mail to  (0ms)
+
+Connecting to database specified by database.yml
+  [1m[36mPrediction Load (3.5ms)[0m  [1mSELECT "predictions".* FROM "predictions" WHERE (DATE(deadline) = DATE('2013-03-26 20:23:04.415321'))[0m
+  [1m[35mEmail Load (0.2ms)[0m  SELECT "emails".* FROM "emails" WHERE "emails"."id" = 1 LIMIT 1
+  Rendered prediction_mailer/welcome_email.html.erb (4.3ms)
+
+Sent mail to  (1ms)
+
