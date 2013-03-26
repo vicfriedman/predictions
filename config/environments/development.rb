@@ -16,6 +16,7 @@ Predictions::Application.configure do
   config.action_controller.perform_caching = false
 
 
+ # Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {

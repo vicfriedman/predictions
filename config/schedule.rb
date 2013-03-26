@@ -19,15 +19,15 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :cron_log, "/log/cron_log.log"
+set :cron_log, "~/log/cron_log.log"
 set :whenever_command, "bundle exec whenever"
 set :environment, "development"
-set :output, { :standard => "/var/log/predictions.log"}
+set :output, { :standard => "~/log/predictions.log", :error => "~/log/predictions.log"}
 
 
 
-every 1.day, :at => '12:45 pm' do
-  runner "PredictionMailer.send_todays_emails"
+every 1.minutes do
+  runner "PredictionMailer.send_todays_emails", :environment => 'development', :output => '~/log/cron_log.log'
 end
 
 
