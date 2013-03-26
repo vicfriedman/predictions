@@ -4597,3 +4597,64 @@ Processing by PredictionsController#new as HTML
   Rendered predictions/_form.html.erb (103.1ms)
   Rendered predictions/new.html.erb within layouts/application (131.4ms)
 Completed 200 OK in 145ms (Views: 144.1ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePredictions (20130324010808)
+Migrating to ChangePredictionsDeadlineToDate (20130325221055)
+Migrating to CreateEmails (20130326183957)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "emails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130326183957')[0m
+  [1m[35m (33.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePredictions (20130324010808)
+Migrating to ChangePredictionsDeadlineToDate (20130325221055)
+Migrating to CreateEmails (20130326183957)
+Migrating to AddEmailIdinPrediction (20130326184332)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TEMPORARY TABLE "altered_predictions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "prediction" varchar(255), "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "predictions"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_predictions" ("id","email","prediction","deadline","created_at","updated_at") VALUES (6, 'victoria.m.friedman@gmail.com', 'i predict this will work', '2013-03-25', '2013-03-25 23:08:24.887589', '2013-03-25 23:08:24.887589')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_predictions" ("id","email","prediction","deadline","created_at","updated_at") VALUES (7, 'victoria.m.friedman@gmail.com', 'i hope this works', '2013-03-25', '2013-03-25 23:08:33.718380', '2013-03-25 23:08:33.718380')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_predictions" ("id","email","prediction","deadline","created_at","updated_at") VALUES (8, 'laurabrown1113@gmail.com', 'working?', '2013-03-25', '2013-03-25 23:08:49.299591', '2013-03-25 23:08:49.299591')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_predictions" ("id","email","prediction","deadline","created_at","updated_at") VALUES (10, 'victoria.m.friedman@gmail.com', 'hellloooo', '2013-03-26', '2013-03-26 16:18:45.965385', '2013-03-26 16:18:45.965385')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_predictions" ("id","email","prediction","deadline","created_at","updated_at") VALUES (11, 'victoria.m.friedman@gmail.com', 'is it working today?', '2013-03-26', '2013-03-26 17:10:34.206910', '2013-03-26 17:10:34.206910')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_predictions" ("id","email","prediction","deadline","created_at","updated_at") VALUES (12, 'laurabrown1113@gmail.com', 'help me', '2013-03-26', '2013-03-26 17:10:42.877648', '2013-03-26 17:10:42.877648')[0m
+  [1m[35m (33.8ms)[0m  DROP TABLE "predictions"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "predictions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prediction" varchar(255), "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_predictions"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (6, 'i predict this will work', '2013-03-25', '2013-03-25 23:08:24.887589', '2013-03-25 23:08:24.887589')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (7, 'i hope this works', '2013-03-25', '2013-03-25 23:08:33.718380', '2013-03-25 23:08:33.718380')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (8, 'working?', '2013-03-25', '2013-03-25 23:08:49.299591', '2013-03-25 23:08:49.299591')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (10, 'hellloooo', '2013-03-26', '2013-03-26 16:18:45.965385', '2013-03-26 16:18:45.965385')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (11, 'is it working today?', '2013-03-26', '2013-03-26 17:10:34.206910', '2013-03-26 17:10:34.206910')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (12, 'help me', '2013-03-26', '2013-03-26 17:10:42.877648', '2013-03-26 17:10:42.877648')
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "altered_predictions"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "altered_predictions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prediction" varchar(255), "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "predictions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (6, 'i predict this will work', '2013-03-25', '2013-03-25 23:08:24.887589', '2013-03-25 23:08:24.887589')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (7, 'i hope this works', '2013-03-25', '2013-03-25 23:08:33.718380', '2013-03-25 23:08:33.718380')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (8, 'working?', '2013-03-25', '2013-03-25 23:08:49.299591', '2013-03-25 23:08:49.299591')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (10, 'hellloooo', '2013-03-26', '2013-03-26 16:18:45.965385', '2013-03-26 16:18:45.965385')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (11, 'is it working today?', '2013-03-26', '2013-03-26 17:10:34.206910', '2013-03-26 17:10:34.206910')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (12, 'help me', '2013-03-26', '2013-03-26 17:10:42.877648', '2013-03-26 17:10:42.877648')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "predictions"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "predictions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prediction" varchar(255), "deadline" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_predictions"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (6, 'i predict this will work', '2013-03-25', '2013-03-25 23:08:24.887589', '2013-03-25 23:08:24.887589')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (7, 'i hope this works', '2013-03-25', '2013-03-25 23:08:33.718380', '2013-03-25 23:08:33.718380')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (8, 'working?', '2013-03-25', '2013-03-25 23:08:49.299591', '2013-03-25 23:08:49.299591')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (10, 'hellloooo', '2013-03-26', '2013-03-26 16:18:45.965385', '2013-03-26 16:18:45.965385')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (11, 'is it working today?', '2013-03-26', '2013-03-26 17:10:34.206910', '2013-03-26 17:10:34.206910')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "predictions" ("id","prediction","deadline","created_at","updated_at") VALUES (12, 'help me', '2013-03-26', '2013-03-26 17:10:42.877648', '2013-03-26 17:10:42.877648')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "altered_predictions"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "predictions" ADD "email_id" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130326184332')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
