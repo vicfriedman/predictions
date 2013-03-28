@@ -3,7 +3,8 @@ class PredictionMailer < ActionMailer::Base
 
   def prediction_email(prediction)
     @prediction = prediction
-    mail(:to => prediction.email.email, :subject => "Here's Your Prediction!")
+    
+    mail(to: prediction.email.email, subject: "Here's Your Prediction!", content_type: "text/html")
   end
 
   def self.send_todays_emails

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html">
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
 
 
-  <body>
-    <p>
+  <body style="text-align: center; font-family: Impact, 'Trebuchet MS', Helvetica, sans-serif; font-weight:300; color: #e52d2d;">
+    <p style="font-size: 2em">
       On <%= @prediction.created_at.to_date.strftime("%B %e, %Y") %> you predicted:
     </p>
-    <p>
+    <p style="font-size: 2.3em">
         <%= @prediction.prediction %>
     </p>
     <%= image_tag 'fortune_600.png' %>
@@ -18,3 +18,4 @@
     </p>
   </body>
 </html>
+

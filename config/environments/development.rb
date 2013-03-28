@@ -16,6 +16,7 @@ Predictions::Application.configure do
   config.action_controller.perform_caching = false
 
   config.action_mailer.asset_host = "http://localhost:3000"
+  
  # Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
