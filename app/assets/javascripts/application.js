@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require validate
 //= require jquery.dropkick
 //= require_tree .
