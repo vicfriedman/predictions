@@ -8,7 +8,7 @@ class PredictionMailer < ActionMailer::Base
   end
 
   def self.send_todays_emails
-    todays_predictions = Prediction.where "DATE(deadline) = DATE(?)", Time.now
+    todays_predictions = Prediction.where "DATE(deadline) = DATE(?)", Time.now.utc
     todays_predictions.each do |p|
       self.prediction_email(p).deliver
     end
