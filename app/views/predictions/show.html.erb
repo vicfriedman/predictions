@@ -1,5 +1,6 @@
 <div class="background2">
   <div class="container2">
+  <div class="showstuff">
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -17,7 +18,8 @@
     <%= @prediction.deadline %>
   </p>
 
-
-  <%= link_to 'Back', new_prediction_path %>
-  </div>
 </div>
+
+</div>
+  <div class="show btn btn-warning">  <%= link_to 'Predict Again', new_prediction_path %></div>
+  </div>
