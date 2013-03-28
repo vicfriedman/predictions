@@ -13,6 +13,4 @@ class PredictionMailer < ActionMailer::Base
       self.prediction_email(p).deliver
     end
   end
-
-
 end
