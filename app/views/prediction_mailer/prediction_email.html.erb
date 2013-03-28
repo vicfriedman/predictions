@@ -6,12 +6,6 @@
 
 
   <body>
-
-   <!--<style type="text/css">
-      body {
-        background: url(<%= image_path('fortune_600.png') %>) no-repeat;
-      }
-    </style> !>
     <p>
       On <%= @prediction.created_at.to_date.strftime("%B %e, %Y") %> you predicted:
     </p>
@@ -19,7 +13,7 @@
         <%= @prediction.prediction %>
     </p>
     <p>
-      <% image_tag attachments['fortune_600.png'].url %>
+      <%= image_tag(image_url('assets/images/fortune_600.png')) %>
 <!--         Did your prediction come true? -->
     </p>
   </body>
