@@ -4,6 +4,7 @@ class PredictionMailer < ActionMailer::Base
   def prediction_email(prediction)
     @prediction = prediction
     mail(:to => prediction.email.email, :subject => "Here's Your Prediction!")
+    attachments.inline['fortune_600.png'] = File.read('fortune_600.png')
   end
 
   def self.send_todays_emails
