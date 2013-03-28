@@ -3,6 +3,8 @@
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
+
+
   <body>
     <p>
       On <%= @prediction.created_at.to_date.strftime("%B %e, %Y") %> you predicted:
@@ -12,7 +14,7 @@
     </p>
     <%= image_tag 'fortune_600.png' %>
     <p>
-      
+
     </p>
   </body>
 </html>
