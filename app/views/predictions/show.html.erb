@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="background2">
+  <div class="container2">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Email:</b>
-  <%= @prediction.email.email %>
-</p>
+  <p>
+    <b>Email:</b>
+    <%= @prediction.email.email %>
+  </p>
 
-<p>
-  <b>Prediction:</b>
-  <%= @prediction.prediction %>
-</p>
+  <p>
+    <b>Prediction:</b>
+    <%= @prediction.prediction %>
+  </p>
 
-<p>
-  <b>Deadline:</b>
-  <%= @prediction.deadline %>
-</p>
+  <p>
+    <b>Deadline:</b>
+    <%= @prediction.deadline %>
+  </p>
 
 
-<%= link_to 'Back', new_prediction_path %>
+  <%= link_to 'Back', new_prediction_path %>
+  </div>
+</div>

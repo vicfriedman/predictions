@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "flat-ui-rails"
 
 gem 'whenever', :require => false
 # To use ActiveModel has_secure_password
