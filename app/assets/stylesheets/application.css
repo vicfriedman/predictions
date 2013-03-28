@@ -19,25 +19,33 @@ body{
 }
 
 .background{
-  background:url('fortune.png') no-repeat -30px 170px #E52D2D;
-  width:100%;
-  height:100%;
-  min-height:850px;
-}
+width: 100%;
+height: 100%;
+min-height: 850px;}
+
 .background2{
-  background:url('fortune2.png') no-repeat -30px 80px #E52D2D;
+/*  background:url('fortune4.png') no-repeat -30px 80px;
   width:100%;
   height:100%;
-  min-height:850px;
+  min-height:850px;*/
 }
 
 .container{
-width: 600px;
-max-width: 1100px;
-margin-left:550px;
-padding-top: 110px;
+width: 660px;
+padding-top: 140px;
+background: url('fortune3.png') no-repeat -3px 202px;
+min-height: 800px;
+padding: 140px 0 0 370px;
+margin: 0 auto;
 }
-.container2{}
+.container2{
+  width: 660px;
+padding-top: 140px;
+background: url('fortune4.png') no-repeat -3px 202px;
+min-height: 800px;
+padding: 140px 0 0 370px;
+margin: 0 auto;
+}
 
 .showstuff{
   display:none;
@@ -53,6 +61,7 @@ border-radius: 9px;
 font-family: 'Raleway', sans-serif;
 width: 192px;
 text-align:center;
+font-weight:bold;
 }
 .btn.btn-warning a{
   text-decoration:none;
@@ -64,9 +73,14 @@ text-align:center;
 } 
 
 .show.btn.btn-warning{
-  position: relative;
-top: 460px;
-left: 750px;
+position: relative;
+top: 380px;
+left: 150px;
+width: 192px;
+display: block;
+text-decoration: none;
+color: #fff;
+font-weight: bold;
 }
 
 
@@ -82,7 +96,9 @@ font-weight:bold;
 
 form{
 margin-left: 50px;
-margin-top: 20px;}
+padding-top: 21px;
+float: left;
+}
 
 .field{
   float: left;
@@ -91,13 +107,13 @@ margin-right: 30px;
 
 .actions{
   float: left;
-margin-left: 20px;
-margin-top: 15px;
+margin-left: 152px;
+margin-top: 43px;
 
 }
 
 #prediction_prediction{
-  width:270px;
+  height:89px;
 }
 
 label{
@@ -107,4 +123,11 @@ font-size:17px;
 input{
   border:1px solid #f49930;
   background-color:#f49930;
+  margin-bottom:16px;
+  color:#fff;
+}
+
+textarea{
+  background-color: #f49930;
+color: #fff;
 }
