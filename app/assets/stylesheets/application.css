@@ -131,3 +131,33 @@ textarea{
   background-color: #f49930;
 color: #fff;
 }
+
+
+@media all and (max-width : 680px) {
+  .container{
+    padding-top: 160px;
+    background: url('fortune_small.png') no-repeat -3px 3px;
+    min-height: 800px;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 100%;
+    color: #fff;
+  }
+  .container2{
+  /*  width: 660px;*/
+  padding-top: 140px;
+  background: url('fortune4_small.png') no-repeat -3px 3px;
+  min-height: 800px;
+  padding: 0px;
+  margin: 0 auto;
+  }
+  .actions{
+    padding:0px;
+    margin:0 auto;
+  }
+  img.cookie{
+    margin-top: 180px;
+    max-width: 90%;
+    padding-left: 20px;
+  }
+}
