@@ -1,12 +1,11 @@
 <script type="text/javascript">
 $(document).ready(function(){
-  // $('#new_prediction').validate();
   $('.error').hide();
 
   $('.submit').click(function(event){
     var email = $('#email').val();
     console.log(email);
-    var emailPattern = /@/g;
+    var emailPattern = /^[A-Za-z0-9!@#]/g;
     if (!emailPattern.test(email)) {
       $('.error').show();
       event.preventDefault();
