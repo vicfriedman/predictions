@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      On <%= @prediction.created_at.to_date.strftime("%B %e, %Y") %> you predicted:
+    </p>
+    <p>
+        <%= @prediction.prediction %>
+    </p>
+    <p>
+        Did your prediction come true?
+    </p>
+  </body>
+</html>
